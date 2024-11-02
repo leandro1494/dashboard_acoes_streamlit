@@ -4,8 +4,7 @@ import pandas as pd
 import yfinance as yf
 from datetime import timedelta
 
-# criar as funções de carregamento de dados
-    # Cotações do Itau - ITUB4 - 2010 a 2024
+# criar as funções de carregamento de dados  
 @st.cache_data
 def carregar_dados(empresas):
     texto_tickers = " ".join(empresas)
@@ -28,7 +27,7 @@ dados = carregar_dados(acoes)
 #criar a interface do streamlit
 st.write("""
          
-  # App Preço de Ações 
+  # App Preço de Ações B3
   O gráfico abaixo representa a evolução do preço das ações ao longo dos anos:     
          """) #markdown
 
